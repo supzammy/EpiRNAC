@@ -1,4 +1,4 @@
-<img width="1434" height="658" alt="image" src="https://github.com/user-attachments/assets/e9561e6d-d4a9-4b50-80b4-e8a70ce77d1d" /># EpiRNA‑C
+# EpiRNA‑C
 <img width="1385" height="746" alt="image" src="https://github.com/user-attachments/assets/86aa0a6f-b3ad-4ca6-9fdb-620e997fd893" />
 
 # EpiRNA‑C – Biophysical Tensor Fusion Scanner (CNN)
@@ -113,7 +113,7 @@ This project is licensed under the MIT License – see the MIT LICENSE file.
 
 
 # EBCS Profile
-<img width="1434" height="658" alt="image" src="https://github.com/user-attachments/assets/e9561e6d-d4a9-4b50-80b4-e8a70ce77d1d" /> 
+<img width="1385" height="746" alt="image" src="https://github.com/user-attachments/assets/86aa0a6f-b3ad-4ca6-9fdb-620e997fd893" />
 
 # AI Attribution (Captum)
 <img width="1364" height="747" alt="image" src="https://github.com/user-attachments/assets/e4b9a661-a4fe-4c73-b6c6-d91f767f5d75" />
