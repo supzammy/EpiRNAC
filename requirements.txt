@@ -1,0 +1,8 @@
+gradio
+torch
+transformers
+matplotlib
+numpy
+scipy
+captum
+biopython
