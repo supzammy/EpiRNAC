@@ -15,7 +15,7 @@ The EpiRNA project provides **two complementary models** — use this CNN scanne
 
 | Model | Backbone | AUROC (real miCLIP) | Inference | Use case |
 |-------|----------|---------------------|-----------|----------|
-| **Biophysical Tensor Fusion (CNN)** | Cross‑Scale CNN with biophysical embeddings | 0.68 | < 5 s per sequence | Live interactive EBCS visualisation |
+| **Biophysical Tensor Fusion (CNN)** | Cross‑Scale CNN with biophysical embeddings | **0.6849** | < 5 s per sequence | Live interactive EBCS visualisation |
 | **Transformer‑Biophysical Fusion** | Frozen DNA‑BERT + biophysical CNN | **0.80** | ~60 s per sequence (single‑window) | High‑specificity validation |
 
 Both models were trained on **11,844 experimentally verified human m⁶A sites (GSE63753, miCLIP)** and an equal number of DRACH‑containing negative windows.
@@ -31,9 +31,10 @@ Both models were trained on **11,844 experimentally verified human m⁶A sites (
 
 ---
 
+
 ## ✨ Key Features
 
-- **Length‑agnostic** – Processes sequences from 41 nt to >200 kb without manual windowing or memory errors.
+- **Length‑agnostic** – Processes sequences from 41 nt to >800 kb without manual windowing or memory errors.
 - **Single‑nucleotide resolution** – EBCS pinpoints the exact catalytic adenosine within DRACH motifs.
 - **Tunable detection modes** – Choose Discovery, Standard, Strict, or Clinical thresholds (τ = 0.0–0.90) to control sensitivity/specificity.
 - **Interpretable profiles** – Per‑nucleotide contrast plots with GC‑content overlay and DRACH alignment markers.
@@ -48,10 +49,10 @@ Both models were trained on **11,844 experimentally verified human m⁶A sites (
 
 | Metric | Value |
 |--------|-------|
-| **AUROC** | **0.6800** |
-| **F1 Score** | 0.7975 |
-| **Sensitivity** | 0.9968 |
-| **Specificity** | 0.4971 |
+| **AUROC** | **0.6849** |
+| **F1 Score** | 0.6739 |
+| **Sensitivity** | 0.7822 |
+| **Specificity** | 0.4609 |
 
 *Evaluation on held‑out test set (GSE63753, n = 3,554 sequences).*  
 *The high sensitivity ensures the scanner misses essentially no m⁶A sites; the moderate specificity is the intended trade‑off for a discovery tool.*
@@ -64,7 +65,7 @@ Both models were trained on **11,844 experimentally verified human m⁶A sites (
 Each nucleotide is represented by a fixed 3‑dimensional vector encoding hydrogen‑bond potential, base‑stacking energy, and solvent accessibility.
 
 ### Multi‑Path Dilated Convolution with Cross‑Scale Fusion
-Three parallel 1D‑convolutional paths (local, flank, structure) process the sequence at different scales. Cross‑Scale Fusion Gates allow the shorter‑range paths to dynamically attend to the long‑range structural path before pooling.
+Three parallel 1D‑convolutional paths (local, flank, structure) process the sequence at different scales. Cross‑Scale Fusion Gates allow the shorter‑range paths to dynamically attend to the long‑range structural path before pooling. The deployed model uses a 128‑filter variant, producing a 384‑dimensional combined feature vector.
 
 ### EBCS – Epitranscriptomic Boundary Contrast Scoring
 The model slides a 41‑nt window across the input sequence. Raw outputs are stabilised by a local‑global variance blender (α = 0.3) and passed through a noise gate. The resulting per‑nucleotide contrast profile is plotted alongside GC content, and DRACH motifs are automatically annotated.
