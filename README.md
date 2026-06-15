@@ -3,7 +3,7 @@
 
 # EpiRNA‑C – Biophysical Tensor Fusion Scanner (CNN)
 
-[![DOI (CNN)](https://zenodo.org/badge/DOI/10.5281/zenodo.20615778.svg)](https://doi.org/10.5281/zenodo.20615778)
+[![DOI (CNN)](https://zenodo.org/badge/DOI/10.5281/zenodo.20687377.svg)]([https://doi.org/10.5281/zenodo.20615778](https://doi.org/10.5281/zenodo.20687377))
 [![Live Demo](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-CNN%20Scanner-blue)](https://huggingface.co/spaces/supzammy/EpiRNAC)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -85,7 +85,7 @@ Run individual window validation:
 
     ```bash
       # Validate a candidate DRACH window
-      python epirna_engine.py --sequence "GGGGGGGGGGGGGGGGGGGGGGACTGGGGGGGGGGGGGGGG"
+      python epirna_engine.py --sequence "GGGGGGGGGGGGGGGGGGGGGGACTGGGGGGGGGGGGGGGGG"
       
       # Batch validation from a FASTA file
       python epirna_engine.py --fasta test_data/candidates.fasta
@@ -98,7 +98,7 @@ If you use EpiRNA, please cite:
 
  * Transformer checkpoint: https://zenodo.org/badge/DOI/10.5281/zenodo.20676854.svg
 
-* CNN checkpoint & benchmarks: https://zenodo.org/badge/DOI/10.5281/zenodo.20615778.svg
+* CNN checkpoint & benchmarks: https://zenodo.org/badge/DOI/10.5281/zenodo.20687377.svg
 
 ## 📜 License
 This project is licensed under the MIT License – see the MIT LICENSE file.
